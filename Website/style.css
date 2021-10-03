@@ -1,0 +1,267 @@
+:root {
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #0b111c;
+  --color-black-1: #0a0e13;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #070b13;
+  font-family: "Jura", sans-serif;
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+li {
+  font-size: 15px;
+}
+
+h2 {
+  display: none;
+}
+
+nav {
+  background: #0b111c;
+}
+nav:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+nav .logo {
+  float: left;
+  color: white;
+  color: var(--color-white);
+  font-size: 20px;
+  font-family: "Indie Flower", cursive;
+  line-height: 70px;
+  padding-left: 150px;
+}
+
+.logo span {
+  color: #0073ff;
+}
+nav ul {
+  float: right;
+  margin-right: 150px;
+  list-style: none;
+  position: relative;
+}
+.dropdown {
+  font-size: 15px;
+}
+nav ul li {
+  display: inline-block;
+  background: #0b111c;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover {
+  color: #0073ff;
+}
+nav ul ul li a:hover {
+  box-shadow: none;
+}
+nav ul ul {
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid #0073ff;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+nav ul ul ul {
+  border-top: none;
+}
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 340px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul ul li a {
+  line-height: 50px;
+}
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+.show,
+.icon,
+input {
+  display: none;
+}
+.fa-plus {
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+.fa-bars {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  /*background: linear-gradient(0deg, rgba(48,48,48,1) 0%, rgba(61,61,61,1) 100%);*/
+  background-image: url(bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96%;
+  padding: 10%;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: "Jura", sans-serif;
+  font-size: 5vw;
+}
+
+img {
+  height: 23vw;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.headertext {
+  padding-right: 40px;
+  color: white;
+}
+
+.center span {
+  color: var(--color-primary);
+}
+
+footer {
+  position: fixed;
+  font-family: "Jura", sans-serif;
+  font-size: 18px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0b111c;
+  color: white;
+}
+/*MEDIA ONLY*/
+
+@media only screen and (max-width: 1250px) {
+  .menu-bar ul li {
+    display: none;
+  }
+  h2 {
+    display: block;
+    color: white;
+  }
+  .center {
+    font-size: 8vw;
+  }
+  img {
+    display: none;
+  }
+  .headertext {
+    padding-right: 0px;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color: #0073ff;
+  }
+  .icon {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul {
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  nav ul ul ul a {
+    padding-left: 80px;
+  }
+  nav ul ul ul li {
+    position: static;
+  }
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+  nav ul ul li {
+    border-bottom: 0px;
+  }
+  span.cancel:before {
+    content: "\f00d";
+  }
+}
