@@ -1,0 +1,60 @@
+:root {
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #0b111c;
+  --color-black-1: #0a0e13;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.5)),
+    url("construction.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Jura", sans-serif;
+  font-size: 10px;
+
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.wip {
+  text-align: center;
+  font-size: 6vw;
+  display: box;
+  position: relative;
+  top: 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  font-size: 2.5vw;
+  width: 15vw;
+  height: 5vw;
+  border-radius: 10px;
+  margin-top: 50px;
+  background-color: #0073ff;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #0158c3;
+  transition: all 0.3s ease 0s;
+}
