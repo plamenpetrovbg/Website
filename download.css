@@ -7,10 +7,8 @@ body{
 
 .buton{
     display: flex-box;
-    justify-content: center;
     align-items: center;
     height: 94vh;
-    margin: auto;
     flex-wrap:wrap;
 }
 
