@@ -11,6 +11,7 @@ body{
     height: 94vh;
     flex-wrap:wrap;
     width: 25vw;
+    margin: auto;
 }
 
 .button {
